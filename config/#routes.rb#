@@ -1,15 +1,4 @@
-FirstApp::Application.routes.draw do
- 
-
-  get "pages/about"
-
-  get "pages/signup"
-
-  get "pages/signin"
-
-  get "page/signin"
-
-  get "page/signup"
+FirstApp::Application.routes.draw d 
 
   get "pages/help"
 
@@ -23,13 +12,11 @@ FirstApp::Application.routes.draw do
 
   resources :users
 
-  match '/signup', :to => 'users#new'
-  match '/signin', :to => 'pages#signin'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   root :to => 'pages#home'
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
